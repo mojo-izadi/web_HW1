@@ -1,13 +1,10 @@
 
-addAllListeners()
-
 function updateFormulas() {
-    const formulas = document.getElementsByTagName("formula")[0]
+    const formulas = document.getElementsByTagName("formula")
 
     for (let i = 0; i < formulas.length; i++) {
-        let formula = formulas[i]
-        let evaluator = formula.getAttribute("evaluator")
-        console.log(formula.id, evaluator, evaluate(evaluator));
+        let evaluator = formulas[i].getAttribute("evaluator")
+        console.log(evaluator, evaluate(evaluator));
     }
 }
 
@@ -23,13 +20,9 @@ function evaluate(expression) {
     } catch (error) {
         return "invalid formula"
     }
-
 }
 
-function addAllListeners() {
-    const inputs = document.getElementsByTagName("input")
-    for (let i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener("input", updateFormulas)
-        console.log(inputs[i])
-    }
+const inputs = document.getElementsByTagName("input")
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("input", updateFormulas);
 }
