@@ -9,3 +9,10 @@
 
 در نهایت به تمام المان‌های input یک eventListener اضافه می‌کنیم:
 ![image](https://github.com/user-attachments/assets/1c1da35d-4395-4b77-a45f-782adea2611e)
+
+
+فایل html:
+
+برای فایل html (که به کمک deepseek نوشته شده) چندین کلاس مختلف در css تعریف شده و سپس برای بخش‌های مختلف با استایل‌های مختلفی که تعریف کردیم بخش وارد کردن ورودی و نمایش حاصل فرمول‌ها را قرار می‌دهیم:
+
+![image](https://github.com/user-attachments/assets/47cfd638-6d8f-4f14-ba19-1786da004d53)
