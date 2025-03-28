@@ -1,10 +1,18 @@
 
 function updateFormulas() {
     const formulas = document.getElementsByTagName("formula")
+    const valueDisplays = document.getElementsByClassName("formula-value");
 
     for (let i = 0; i < formulas.length; i++) {
         let evaluator = formulas[i].getAttribute("evaluator")
-        console.log(evaluator, evaluate(evaluator));
+        const evaluation_result = evaluate(evaluator)
+        valueDisplays[i].textContent = ` = ${evaluation_result}`;
+
+        if (evaluation_result === "invalid formula") {
+            valueDisplays[i].style.color = "red";
+        } else {
+            valueDisplays[i].style.color = "inherit";
+        }
     }
 }
 
